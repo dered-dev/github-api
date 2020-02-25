@@ -1,0 +1,27 @@
+
+.container__posts{
+  margin-top: 5rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.cover__thumbnail{
+  position: relative;
+  text-align: center;
+}
+.cover__thumbnail img{
+  width: 100%;
+}
+.cover__thumbnail span{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 1px 1px 10px rgba(0,0,0,.5);
+  font-size: 1.5em;
+}
