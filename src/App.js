@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-import Navbar from './Components/Navbar/'
-import Gridpost from './Components/Gridpost/'
+import Home from './Views/Home'
 
-function App () {
-  return (
-    <div className='app'>
-      <Navbar />
-      <Gridpost />
-    </div>
-  )
+class App extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      authorization: ''
+    }
+  }
+
+  render () {
+    return (
+      <div className='app'>
+        <div className='container'>
+          <Home />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App

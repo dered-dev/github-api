@@ -1,27 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+body {
+  background: #DA4453;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #89216B, #DA4453);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.container__posts{
-  margin-top: 5rem;
-  display: inline-block;
-  width: 100%;
+  padding: 20px;
+  font-family: 'Roboto' ;
+  font-weight: 300;
+  font-size: .875em;
 }
 
-.cover__thumbnail{
-  position: relative;
+blockquote {
+  color: white;
   text-align: center;
 }
-.cover__thumbnail img{
-  width: 100%;
+.img__avatar{
+  width: 30px;
+  border-radius: 50%;
+  margin-left: 1rem;
+  margin-right: 1px;
+  display: inline-block;
 }
-.cover__thumbnail span{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
+h1{
   color: #fff;
   font-weight: 600;
-  text-align: center;
-  text-shadow: 1px 1px 10px rgba(0,0,0,.5);
-  font-size: 1.5em;
+  text-shadow: 0 2px 20px rgba(0,0,0,.3)
 }
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: #f2f2f2;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+table * {
+  position: relative;
+}
+table th {
+  text-shadow: 0 2px 10px rgba(0,0,0,.3)
+}
+table td, table th {
+  padding-left: 8px;
+  padding: 1em 1.25em ;
+  
+}
+table td{
+  color: #444444;
+}
+table td.public{
+  color: #00C176;
+}
+table thead tr {
+  height: 60px;
+  background: #A71A5B;
+  font-size: 16px;
+  color: #fff;
+}
+table tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #E3F1D5;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table td, table th {
+  text-align: left;
+}
+table td.l, table th.l {
+  text-align: right;
+}
+table td.c, table th.c {
+  text-align: center;
+}
+table td.r, table th.r {
+  text-align: center;
+}
+table td .btn{
+  background-color: #A71A5B;
+  color: #fff;
+  border-color: #A71A5B;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.tbl-header{
+  box-shadow: 0 10px 30px  rgba(0,0,0,.2);
+}
+
+@media screen and (max-width: 35.5em) {
+  table {
+    display: block;
+  }
+  table > *, table tr, table td, table th {
+    display: block;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    height: auto;
+    padding: 1.5rem 0;
+    min-height: 50px;
+  }
+  table tbody tr td {
+    padding-left: 45%;
+    margin-bottom: 12px;
+  }
+  table tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  table tbody tr td:before {
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+  table tbody tr td:nth-child(1):before {
+    content: "Avatar";
+  }
+  table tbody tr td:nth-child(2):before {
+    content: "Id";
+  }
+  table tbody tr td:nth-child(3):before {
+    content: "Name";
+  }
+  table tbody tr td:nth-child(4):before {
+    content: "Public";
+  }
+  table tbody tr td:nth-child(5):before {
+    content: "Full name";
+  }
+  table tbody tr td:nth-child(6):before {
+    content: "Description";
+  }
+}
+
