@@ -1,44 +1,29 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import ReposList from '../Components/ReposList'
 import AppLoading from '../Components/AppLoading'
+import api from '../lib/api'
 
-class Home extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      loading: true,
-      repos: []
+function Home () {
+  // set initial state
+  const [repos, setRepos] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    async function getRepos () {
+      const repos = await api.getRepos()
+      setRepos(repos)
+      setLoading(false)
     }
-  }
+    getRepos()
+  }, [repos])
 
-  async componentDidMount () {
-    const response = await window.fetch('https://api.github.com/users/kodemia/repos')
-    const repos = await response.json()
-
-    this.setState({
-      repos: repos,
-      loading: false
-    })
-    console.log(this.state.repos)
-  }
-
-  componentDidUpdate () {
-    console.log('cuando ya se actualizó el componente')
-  }
-
-  componentWillDestroy () {
-    console.log('Se murió componente')
-  }
-
-  render () {
-    if (this.state.loading) return <AppLoading />
-    return (
-      <ReposList
-        list={this.state.repos}
-      />
-    )
-  }
+  if (loading) return <AppLoading />
+  return (
+    <ReposList
+      list={repos}
+    />
+  )
 }
 
 export default Home

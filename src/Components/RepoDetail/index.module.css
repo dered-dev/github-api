@@ -1,0 +1,63 @@
+.avatarRepository{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 2px 30px rgba(0,0,0,0.5);
+}
+.cardRepository{
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.repoName{
+  color: #444;
+}
+.repoFullName{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.viewGithub{
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  padding-left: 2rem;
+  background-image: url('../../assets/img/icon_github.svg');
+  background-repeat: no-repeat;
+  background-position: .5em center;
+  background-size: 17px;
+}
+.isPrivate{
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: 600;
+}
+.isPublic{
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.description{
+  text-align: left;
+  font-size: 1.25rem;
+}
+.branchRepo{
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  background-image: url('../../assets/img/version.svg');
+  background-repeat: no-repeat;
+  background-position: .5em center;
+  background-size: 17px;
+  padding-left: 2rem;
+}

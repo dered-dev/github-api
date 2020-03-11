@@ -13,7 +13,7 @@ function RepoItem (props) {
       <td className={props.private ? 'private' : 'public'}><b>{props.private ? 'Privado' : 'Público'}</b></td>
       <td>{props.full_name}</td>
       <td>{props.description}</td>
-      <td><a className='btn btn-dark rounded-pill px-4' href={props.owner ? props.owner.url : ''} target='_blank'>Ver</a></td>
+      <td><a className='btn btn-dark rounded-pill px-4' href={`/repo-detail/${props.name}`}>Ver</a></td>
     </tr>
   )
 }

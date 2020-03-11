@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
+import {
+  BrowserRouter,
+  Switch,
+  Route
+} from 'react-router-dom'
 
 import Home from './Views/Home'
+import RepoDetail from './Views/RepoDetail'
 
 class App extends Component {
   constructor (props) {
@@ -12,11 +18,24 @@ class App extends Component {
 
   render () {
     return (
-      <div className='app'>
-        <div className='container'>
-          <Home />
+      <BrowserRouter>
+        <div className='app'>
+          <div className='container'>
+            <Switch>
+              <Route
+                path='/'
+                component={Home}
+                exact
+              />
+              <Route
+                path='/repo-detail/:name'
+                component={RepoDetail}
+                exact
+              />
+            </Switch>
+          </div>
         </div>
-      </div>
+      </BrowserRouter>
     )
   }
 }
